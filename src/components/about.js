@@ -1,40 +1,40 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-export default function About(){
+export default function About(props){
     
-    const togglecolor = () => {
-        if(mystyle.color==='white'){
-            setmystyle({
-                color:'black',
-                background:'white'
-            })
-            setmytext("Enable Dark Mode")
-        }
-        else{
-            setmystyle({
-                color:'white',
-                background:'black'
-            })
-            setmytext("Enable Light Mode")
-        }
-    }
-    const [mystyle,setmystyle] = useState({
-        color:'white',
-        background:'black'
-    })
+    // const togglecolor = () => {
+    //     if(mystyle.color==='white'){
+    //         setmystyle({
+    //             color:'black',
+    //             background:'white'
+    //         })
+    //         setmytext("Enable Dark Mode")
+    //     }
+    //     else{
+    //         setmystyle({
+    //             color:'white',
+    //             background:'black'
+    //         })
+    //         setmytext("Enable Light Mode")
+    //     }
+    // }
+    // const [mystyle,setmystyle] = useState({
+    //     color:'white',
+    //     background:'black'
+    // })
     let textstyle ={
         color:'black'
     }
-    const [mytext,setmytext] = useState("Enable Light Mode");
+    // const [mytext,setmytext] = useState("Enable Light Mode");
     return(
         <>
-        <div className="container mb-4" style={mystyle}>
+        <div className="container my-4" style={props.mystyle}>
         <h1 className='container my-3'>About Us</h1>
-        <div className="container" style={mystyle}>
+        <div className="container" style={props.mystyle}>
                     <div className="accordion" id="accordionExample">
             <div className="accordion-item">
                 <h2 className="accordion-header" id="headingOne">
-                <button className="accordion-button" type="button" style={mystyle} data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button className="accordion-button" type="button" style={props.mystyle} data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Accordion Item #1
                 </button>
                 </h2>
@@ -46,7 +46,7 @@ export default function About(){
             </div>
             <div className="accordion-item">
                 <h2 className="accordion-header" id="headingTwo">
-                <button className="accordion-button collapsed" type="button" style={mystyle} data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button className="accordion-button collapsed" type="button" style={props.mystyle} data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     Accordion Item #2
                 </button>
                 </h2>
@@ -58,7 +58,7 @@ export default function About(){
             </div>
             <div className="accordion-item">
                 <h2 className="accordion-header" id="headingThree">
-                <button className="accordion-button collapsed" type="button" style={mystyle} data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <button className="accordion-button collapsed" type="button" style={props.mystyle} data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                     Accordion Item #3
                 </button>
                 </h2>
@@ -70,10 +70,11 @@ export default function About(){
             </div>
             </div>
         </div>
-        <div className="container">
+        </div>
+        {/* <div className="container">
             <button type="button" className="btn btn-outline-primary my-3" onClick={togglecolor}>{mytext}</button>
-        </div>
-        </div>
+        </div> */}
+       
         </>
     )
 }

@@ -1,8 +1,5 @@
-import React from 'react'
+import React from 'react';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 // import PropTypes from "prop-types"
@@ -23,7 +20,7 @@ export default function Navbar(props){
         <li className="nav-item">
           <Link className="nav-link" to="/about" style={props.stname}>{props.abouttext}</Link>
         </li>
-        <li className="nav-item dropdown">
+        {/* <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="/" style={props.stname} id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
@@ -33,15 +30,16 @@ export default function Navbar(props){
             <li><hr className="dropdown-divider"/></li>
             <li><a className="dropdown-item" href="/">Something else here</a></li>
           </ul>
-        </li>
+        </li> */}
       </ul>
-      <form className="d-flex">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <div className="btn-group" role="group" aria-label="Basic mixed styles example">
+  <button type="button" className="btn btn-danger" onClick={props.bgred}>Red</button>
+  <button type="button" className="btn btn-warning" onClick={props.bgorange}>Yellow</button>
+  <button type="button" className="btn btn-success" onClick={props.bggreen}>Green</button>
+</div>
       <div className="form-check form-switch mx-2">
   <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.funcname}/>
-  <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={props.stname}>Enable Dark Mode</label>
+  <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={props.stname}>Enable Light Mode</label>
 </div>
     </div>
   </div>
