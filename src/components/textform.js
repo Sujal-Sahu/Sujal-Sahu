@@ -44,7 +44,7 @@ export default function Textform(props){
       }
     }
     const [text, setText] = useState("");
-    let length1 = text.split(" ").filter((element)=>{return element.length!==0}).length;
+    let length1 = text.split(/\s+/).filter((element)=>{return element.length!==0}).length;
     let time1 = 0.008 * length1;
     let text1 = "Enter something in the textbox to see the preview";
     return(

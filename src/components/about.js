@@ -70,6 +70,7 @@ export default function About(props){
             </div>
             </div>
         </div>
+        <div style={{height:'1.5rem'}}></div>
         </div>
         {/* <div className="container">
             <button type="button" className="btn btn-outline-primary my-3" onClick={togglecolor}>{mytext}</button>

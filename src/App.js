@@ -35,7 +35,7 @@ function App() {
   
   const [mystyle,setmystyle] = useState({
     color:'white',
-    background:'black'
+    background:'#0b0a35'
 })
   const togglecolor = () =>{
     if(mode.color==='black'){
@@ -47,7 +47,7 @@ function App() {
       //   cl:"white"});
       setmystyle({
           color:'white',
-          background:'black'
+          background:'#0b0a35'
       })
       // document.body.style.background = '#0b0a35';
       // document.body.style.color = 'white';
@@ -86,31 +86,52 @@ function App() {
       
     if(mode.color==='black'){
       document.body.style.background = 'rgb(116 5 5 / 52%)';
-
+    //   setmystyle({
+    //     color:'white',
+    //     background:'rgb(116 5 5 / 52%)'
+    // })
     }
     else{
       document.body.style.background = 'rgb(116, 5, 5)';
+    //   setmystyle({
+    //     color:'black',
+    //     background:'rgb(116, 5, 5)'
+    // })
 
     }
     
   }
   const convorange=()=>{
     if(mode.color==='black'){
-     
+    //   setmystyle({
+    //     color:'white',
+    //     background:'rgb(248 189 20)'
+    // })
       document.body.style.background = 'rgb(248 189 20)';
     }
     else{
+    //   setmystyle({
+    //     color:'black',
+    //     background:'rgb(132 102 17)'
+    // })
       document.body.style.background = 'rgb(132 102 17)';
 
     }
   }
   const convgreen=()=>{
     if(mode.color==='black'){
+    //   setmystyle({
+    //     color:'white',
+    //     background:'rgb(44 200 79)'
+    // })
       document.body.style.background = 'rgb(44 200 79)';
 
     }
     else{
-      
+    //   setmystyle({
+    //     color:'black',
+    //     background:'rgb(6 69 20)'
+    // })
       document.body.style.background = 'rgb(6 69 20)';
     }
   }
@@ -120,7 +141,9 @@ function App() {
        <Router>
        {/* <i class="fa fa-sun"></i> */}
       <Navbar funcname = {togglecolor} stname = {mode} clname={mode1} bgred={convred} bgorange={convorange} bggreen={convgreen}/>
+      <div style={{height:'3rem'}}>
       <Alert alert={alert}/>
+      </div>
       <Switch>
           <Route path="/about">
             <About mystyle={mystyle}/>
